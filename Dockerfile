@@ -4,8 +4,8 @@ FROM node:18-alpine AS base
 # Install dependencies
 FROM base AS deps
 WORKDIR /app
-COPY package.json package-lock.json* ./
-RUN npm ci
+COPY package.json ./
+RUN npm install
 
 # Build the app
 FROM base AS builder
