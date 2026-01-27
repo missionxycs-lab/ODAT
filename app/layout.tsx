@@ -1,4 +1,4 @@
-aimport type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Inter, Krub } from "next/font/google";
 import "./globals.css";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
