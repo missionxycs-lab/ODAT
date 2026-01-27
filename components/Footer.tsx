@@ -6,7 +6,6 @@ export function Footer() {
 			<div className="container mx-auto px-4 text-center">
 				<p className="text-sm text-muted-foreground">
 					App developed by Youth Corps Singapore
-					</Link>
 				</p>
 			</div>
 		</footer>
