@@ -13,12 +13,15 @@ function QRCodeCard({ sessionCode }: { sessionCode: string }) {
 	const [qrUrl, setQrUrl] = useState<string>("");
 
 	useEffect(() => {
-		if (typeof window !== "undefined") {
-			console.log(window.location.origin);
-			const joinUrl = `${window.location.origin == "http://localhost:3000" ? "http://192.168.1.41:3000" : window.location.origin}/?code=${sessionCode}`;
-			const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(joinUrl)}`;
-			setQrUrl(qrCodeUrl);
-		}
+    	if (typeof window !== "undefined") {
+        	const origin = window.location.origin;
+        
+        	// ADDED: role=player to distinguish scanners from the host
+        	const joinUrl = `${origin}/?role=player&code=${sessionCode}`;
+        
+        	const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(joinUrl)}`;
+        	setQrUrl(qrCodeUrl);
+    	}
 	}, [sessionCode]);
 
 	if (!qrUrl) return null;
