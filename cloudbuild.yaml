@@ -1,0 +1,15 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'gcr.io/$PROJECT_ID/odat',
+        '--build-arg',
+        'NEXT_PUBLIC_CONVEX_URL=${_NEXT_PUBLIC_CONVEX_URL}',
+        '.',
+      ]
+images:
+  - 'gcr.io/$PROJECT_ID/odat'
+substitutions:
+  _NEXT_PUBLIC_CONVEX_URL: 'REPLACE_WITH_YOUR_CONVEX_URL'
