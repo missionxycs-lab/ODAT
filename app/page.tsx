@@ -18,6 +18,9 @@ function HomeContent() {
 	const [loadingCreate, setLoadingCreate] = useState(false);
 	const [loadingJoin, setLoadingJoin] = useState(false);
 
+	// 1. Detect if the user is a player from the QR code flag
+	const isPlayer = searchParams.get("role") === "player";
+
 	// Auto-fill room code from URL parameter
 	useEffect(() => {
 		const codeParam = searchParams.get("code");
@@ -62,8 +65,9 @@ function HomeContent() {
 							One Day At a Time
 						</h1>
 						<p className="text-lg text-muted-foreground max-w-lg mx-auto leading-relaxed">
-							An experiential activity to gain greater awareness of the
-							challenges faced by a low-income family
+							{isPlayer 
+                                ? "Enter your name below to join the experiential activity." 
+                                : "An experiential activity to gain greater awareness of the challenges faced by a low-income family"}
 						</p>
 					</div>
 
@@ -75,12 +79,14 @@ function HomeContent() {
 								value={code}
 								onChange={(e) => setCode(e.target.value.toUpperCase())}
 								className="h-12 text-center text-lg font-medium bg-muted/30 border-muted-foreground/20 focus:border-primary"
+                                readOnly={isPlayer && !!code} // Prevent player from changing the code if it's in the URL
 							/>
 							<Input
 								placeholder="Your Name"
 								value={name}
 								onChange={(e) => setName(e.target.value)}
 								className="h-12 text-center text-lg font-medium bg-muted/30 border-muted-foreground/20 focus:border-primary"
+                                autoFocus={isPlayer} // Focus name field immediately for players
 							/>
 						</div>
 
@@ -94,27 +100,32 @@ function HomeContent() {
 							</Button>
 						</div>
 
-						<div className="pt-6">
-							<div className="relative">
-								<div className="absolute inset-0 flex items-center">
-									<span className="w-full border-t border-muted-foreground/20" />
+						{/* 2. ONLY show the Create section if NOT a player */}
+						{!isPlayer && (
+							<>
+								<div className="pt-6">
+									<div className="relative">
+										<div className="absolute inset-0 flex items-center">
+											<span className="w-full border-t border-muted-foreground/20" />
+										</div>
+										<div className="relative flex justify-center text-sm">
+											<span className="bg-background px-4 text-muted-foreground">
+												or
+											</span>
+										</div>
+									</div>
 								</div>
-								<div className="relative flex justify-center text-sm">
-									<span className="bg-background px-4 text-muted-foreground">
-										or
-									</span>
-								</div>
-							</div>
-						</div>
 
-						<Button
-							onClick={onCreate}
-							disabled={loadingCreate}
-							variant="outline"
-							className="w-full h-12 text-lg font-medium border-muted-foreground/20 hover:bg-muted/30"
-						>
-							{loadingCreate ? "Creating..." : "Create New Session"}
-						</Button>
+								<Button
+									onClick={onCreate}
+									disabled={loadingCreate}
+									variant="outline"
+									className="w-full h-12 text-lg font-medium border-muted-foreground/20 hover:bg-muted/30"
+								>
+									{loadingCreate ? "Creating..." : "Create New Session"}
+								</Button>
+							</>
+						)}
 					</div>
 				</div>
 			</main>
