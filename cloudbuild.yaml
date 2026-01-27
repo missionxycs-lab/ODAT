@@ -11,5 +11,8 @@ steps:
       ]
 images:
   - 'gcr.io/$PROJECT_ID/odat'
+options:
+  logging: CLOUD_LOGGING_ONLYoptions:
+  logging: CLOUD_LOGGING_ONLY
 substitutions:
   _NEXT_PUBLIC_CONVEX_URL: 'REPLACE_WITH_YOUR_CONVEX_URL'
