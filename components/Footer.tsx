@@ -6,12 +6,7 @@ export function Footer() {
 			<div className="container mx-auto px-4 text-center">
 				<p className="text-sm text-muted-foreground">
 					App developed by{" "}
-					<Link
-						href="https://archerchua.com"
-						target="_blank"
-						className="underline hover:text-primary"
-					>
-						Archer Chua
+						Youth Corps Singapore
 					</Link>
 				</p>
 			</div>
