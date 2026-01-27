@@ -1,18 +1,18 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
-      [
-        'build',
-        '-t',
-        'gcr.io/$PROJECT_ID/odat',
-        '--build-arg',
-        'NEXT_PUBLIC_CONVEX_URL=${_NEXT_PUBLIC_CONVEX_URL}',
-        '.',
-      ]
+      - 'build'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/odat'
+      - '--build-arg'
+      - 'NEXT_PUBLIC_CONVEX_URL=${_NEXT_PUBLIC_CONVEX_URL}'
+      - '.'
+
 images:
   - 'gcr.io/$PROJECT_ID/odat'
+
 options:
-  logging: CLOUD_LOGGING_ONLYoptions:
   logging: CLOUD_LOGGING_ONLY
+
 substitutions:
   _NEXT_PUBLIC_CONVEX_URL: 'REPLACE_WITH_YOUR_CONVEX_URL'
