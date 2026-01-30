@@ -18,7 +18,7 @@ const krub = Krub({
 });
 
 export const metadata: Metadata = {
-	title: "One Day at A Time",
+	title: "One Day at a Time",
 	description: "For SG Snapshot",
 };
 
