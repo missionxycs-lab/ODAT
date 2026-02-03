@@ -149,7 +149,7 @@ export const updateNarrativesToPastTense = mutation({
 			},
 			10: {
 				optionA_narrative:
-					"A large but necessary expense. You could now cook at home again.",
+					"A large but necessary expense. You can now cook at home again.",
 				optionB_narrative:
 					"You postponed addressing the broken stove by choosing to eat out, but the issue persisted.",
 				optionB_text: "Eat out for a week and delay solving the stove issue",
