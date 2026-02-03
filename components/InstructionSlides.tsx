@@ -32,7 +32,7 @@ const instructionSlides: InstructionSlide[] = [
 	},
 	{
 		title: "Starting Situation",
-		content: ["You are unemployed and have $150 left."],
+		content: ["You are without a job and down to your last $150."],
 	},
 	{
 		title: "The Challenge",
