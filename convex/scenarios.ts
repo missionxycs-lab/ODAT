@@ -249,7 +249,7 @@ export const seed = mutation({
 				optionA_consequence: {
 					resourceChange: -20,
 					narrative:
-						"Your daughter got to celebrate with her friend, strengthening their friendship.",
+						"Your daughter got to celebrate her friend's birthday, strengthening their friendship.",
 				},
 				optionB_consequence: {
 					resourceChange: 0,
@@ -278,7 +278,7 @@ export const seed = mutation({
 				optionA_consequence: {
 					resourceChange: -120,
 					narrative:
-						"A large but necessary expense. You could now cook at home again.",
+						"A large but necessary expense. You can now cook at home again.",
 				},
 				optionB_consequence: {
 					resourceChange: -80,
@@ -367,9 +367,9 @@ export const seed = mutation({
 				},
 				subPages: [
 					{
-						title: "End of two weeks",
+						title: "Loan & Ring",
 						content:
-							"You need to repay your loans and redeem your wedding ring.",
+							"You must repay your outstanding loan and redeem your wedding ring. If you don't, you will receive one Health Hit",
 					},
 					{
 						title: "Reflection",
@@ -378,12 +378,7 @@ export const seed = mutation({
 					{
 						title: "Before we end...",
 						content:
-							"close your eyes, take a deep breath, and take off the hat of the single parent.",
-					},
-					{
-						title: "Loan & Ring",
-						content:
-							"You must repay your outstanding loan and redeem your wedding ring. If you don't, you will receive one Health Hit.",
+							"close your eyes, take a slow, deep breath, and take off the hat of the single parent.",
 					},
 				],
 			},
