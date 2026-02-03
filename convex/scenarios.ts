@@ -51,7 +51,7 @@ export const seed = mutation({
 			{
 				day: 0,
 				prompt:
-					"You are a single parent with two school-going children, living in a one-room rental flat. You are unemployed with $150 left. Can you make it through the next two weeks?",
+					"You are a single parent with two school-going children, living in a one-room rental flat. You are without a job and done to your last $150. Can you make it through the next two weeks?",
 				optionA_text: "I'm ready to begin",
 				optionB_text: "I'm ready to begin",
 				optionA_consequence: {
