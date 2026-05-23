@@ -3,6 +3,7 @@ import { Inter, Krub } from "next/font/google";
 import "./globals.css";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ConvexProvider, ConvexReactClient } from "convex/react";
 
 const inter = Inter({
 	variable: "--font-inter",
@@ -41,4 +42,17 @@ export default function RootLayout({
 			</body>
 		</html>
 	);
+}
+
+const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+export default function RootLayout({ children }) {
+  return (
+    <html>
+      <body>
+        <ConvexProvider client={convex}>
+          {children}
+        </ConvexProvider>
+      </body>
+    </html>
+  );
 }
