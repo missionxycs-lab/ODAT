@@ -244,9 +244,6 @@ export default function InstructionSlides({
 							<div className="flex items-center space-x-3">
 								<span className="text-white font-bold">1 Health Hit</span>
 								<div className="flex items-center space-x-1">
-									<div className="w-8 h-8 rounded-full bg-blue-500 opacity-30"></div>
-									<div className="w-8 h-8 rounded-full bg-blue-500 opacity-30"></div>
-									<div className="w-8 h-8 rounded-full bg-blue-500 opacity-30"></div>
 									<div> = </div>
 									<div className="w-8 h-8 rounded-full bg-red-500"></div>
 								</div>
@@ -264,9 +261,6 @@ export default function InstructionSlides({
 							<div className="flex items-center space-x-3">
 								<span className="text-white font-bold">1 Job Hit</span>
 								<div className="flex items-center space-x-1">
-									<div className="w-8 h-8 rounded-full bg-red-500 opacity-30"></div>
-									<div className="w-8 h-8 rounded-full bg-red-500 opacity-30"></div>
-									<div className="w-8 h-8 rounded-full bg-red-500 opacity-30"></div>
 									<div> = </div>
 									<div className="w-8 h-8 rounded-full bg-green-500"></div>
 								</div>
