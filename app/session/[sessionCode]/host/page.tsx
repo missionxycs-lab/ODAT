@@ -34,17 +34,17 @@ function QRCodeCard({ sessionCode }: { sessionCode: string }) {
 				</CardTitle>
 			</CardHeader>
 			<CardContent className="flex flex-col items-center space-y-6">
-				<div className="p-6 bg-white rounded-2xl shadow-inner">
-					{/* eslint-disable-next-line @next/next/no-img-element */}
-					<img
-						src={qrUrl}
-						alt="QR Code to join session"
-						className="w-64 h-64"
-					/>
-				</div>
-				<CardTitle className="text-2xl sm:text-3xl font-semibold text-foreground">
-					https://odatycs.vercel.app
-				</CardTitle>
+    			<div className="p-6 bg-white rounded-2xl shadow-inner">
+       				 {/* eslint-disable-next-line @next/next/no-img-element */}
+        			<img
+            			src={qrUrl}
+            			alt="QR Code to join session"
+            			className="w-64 h-64"
+        			/>
+   				 </div>
+    			<p className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-gray-100">
+       			https://odatycs.vercel.app
+    			</p>
 			</CardContent>
 		</Card>
 	);
