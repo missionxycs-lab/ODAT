@@ -41,6 +41,9 @@ function QRCodeCard({ sessionCode }: { sessionCode: string }) {
 						alt="QR Code to join session"
 						className="w-64 h-64"
 					/>
+				<CardTitle className="text-3xl sm:text-4xl font-semibold">
+					https://odatycs.vercel.app
+				</CardTitle>
 				</div>
 			</CardContent>
 		</Card>

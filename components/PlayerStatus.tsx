@@ -359,7 +359,7 @@ export function PlayerStatus({ player, showHits = true }: PlayerStatusProps) {
 							onClick={handlePawnRing}
 							disabled={player.ringPawned}
 						>
-							Confirm Pawn ($150)
+							Confirm Pawn Ring ($150)
 						</AlertDialogAction>
 					</AlertDialogFooter>
 				</AlertDialogContent>
@@ -381,7 +381,7 @@ export function PlayerStatus({ player, showHits = true }: PlayerStatusProps) {
 							onClick={handleRedeemRing}
 							disabled={!player.ringPawned || player.resources < 159}
 						>
-							Confirm Redeem ($159)
+							Confirm Redeem Ring ($159)
 						</AlertDialogAction>
 					</AlertDialogFooter>
 				</AlertDialogContent>

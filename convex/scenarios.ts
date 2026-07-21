@@ -369,7 +369,7 @@ export const seed = mutation({
 					{
 						title: "Loan & Ring",
 						content:
-							"You must repay your outstanding loan and redeem your wedding ring. If you don't, you will receive one Health Hit",
+							"You need to repay your outstanding loan and redeem your wedding ring.\n\nIf you succeed, you may remove one Health Hit!\n\nIf you fail, you will receive one Health Hit!",
 					},
 					{
 						title: "Reflection",

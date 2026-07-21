@@ -61,10 +61,10 @@ export default function ResultsPage() {
 							</h2>
 						</div>
 
-						{/* Final Resources */}
+						{/* Cash Balance */}
 						<div className="text-center">
 							<div className="text-sm text-muted-foreground uppercase tracking-wide">
-								Final Resources
+								Cash Balance
 							</div>
 							<div
 								className={`text-5xl font-bold ${player.resources < 0 ? "text-red-600" : "text-green-600"} mt-2`}
@@ -162,7 +162,7 @@ export default function ResultsPage() {
 									player.ringPawned ? "text-red-600" : "text-green-600"
 								}`}
 							>
-								{player.ringPawned ? "💍 Pawned" : "💍 Safe"}
+								{player.ringPawned ? "💍 Pawned" : "💍 Kept Safe"}
 							</div>
 						</div>
 

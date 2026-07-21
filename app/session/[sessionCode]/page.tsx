@@ -349,7 +349,7 @@ function LoanReminderSubPage({
 		}
 		return ringPawned
 			? "Plan for $159 to redeem on Day 14."
-			: "No cost pending.";
+			: "No cost pending";
 	})();
 
 	const getResolutionLabel = () => {
@@ -529,11 +529,6 @@ function LoanReminderSubPage({
 							<div className="text-sm text-center text-red-600">
 								You need ${totalCost} to resolve everything but currently have $
 								{resources}.
-							</div>
-						)}
-						{alreadyResolved && day !== 14 && (
-							<div className="text-sm text-center text-green-600">
-								You&apos;ve already completed this reminder.
 							</div>
 						)}
 					</CardContent>

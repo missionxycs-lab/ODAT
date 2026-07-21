@@ -165,7 +165,7 @@ export const advanceDay = mutation({
 
 			for (const player of players) {
 				if ((player.loanBalance ?? 0) > 0) {
-					// Deduct the unpaid loan amount with 10% interest from final resources
+					// Deduct the unpaid loan amount with 10% interest from cash balance
 					const unpaidLoanWithInterest = Math.round(
 						(player.loanBalance ?? 0) * 1.1
 					);
