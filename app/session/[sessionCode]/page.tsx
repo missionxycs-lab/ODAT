@@ -149,10 +149,11 @@ function GameOptions({
 	const [choiceError, setChoiceError] = useState<string | null>(null);
 	// Check if it's Day 14 and player is unemployed
 	const isDay14 = session.currentDay === 14;
-	const salaryDisabled = isDay14 && !player.isEmployed;
+	// Check if it's Day 8 and player is unemployed
+	const isDay8 = session.currentDay === 8;
+	const salaryDisabled = (isDay14 || isDay8) && !player.isEmployed;
 
 	// Check Day 5 choice for Day 8 restrictions
-	const isDay8 = session.currentDay === 8;
 	const day5Choice = (player.choices ?? []).find(
 		(choice: Choice) => choice.day === 5
 	);

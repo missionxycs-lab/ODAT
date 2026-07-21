@@ -212,8 +212,8 @@ export default function ResultsPage() {
 												</span>
 											</div>
 											<span className="font-bold text-sm px-3 py-1 rounded-full bg-white/90 text-black">
-												{c.consequence.resourceChange >= 0 ? "+" : ""}$
-												{c.consequence.resourceChange}
+											  	{c.consequence.resourceChange >= 0 ? "+" : "-"}$
+  												{Math.abs(c.consequence.resourceChange)}
 											</span>
 										</div>
 										<div className="text-white text-sm leading-relaxed">
