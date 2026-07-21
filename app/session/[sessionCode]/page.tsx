@@ -561,13 +561,15 @@ function DayResultHoldingPage({ day }: { day: number }) {
 function PlayerStatusSection({
 	player,
 	showHits = true,
+	isDay14 = false,  
 }: {
 	player: Player;
 	showHits?: boolean;
+	isDay14?: boolean;
 }) {
 	return (
 		<div>
-			<PlayerStatus player={player} showHits={showHits} />
+			<PlayerStatus player={player} showHits={showHits} isDay14={isDay14} />
 		</div>
 	);
 }
@@ -853,7 +855,7 @@ export default function PlayerPage() {
 		return (
 			<main className="min-h-screen p-2 sm:p-4 space-y-2 sm:space-y-4">
 				<div className="max-w-4xl mx-auto flex flex-col gap-2 sm:gap-4">
-					<PlayerStatusSection player={player} showHits={!session.hideHits} />
+					<PlayerStatusSection player={player} showHits={!session.hideHits} isDay14={session.currentDay === 14}/>
 					<GameOptions
 						session={session}
 						scenario={scenario}

@@ -32,6 +32,7 @@ export const JOB_TERMINATION_STORAGE_KEY = "odat_job_termination_alert_shown";
 interface PlayerStatusProps {
 	player: Player;
 	showHits?: boolean;
+	isDay14?: boolean;
 }
 
 export function HitsDisplay({
@@ -84,7 +85,7 @@ export function HitsDisplay({
 	);
 }
 
-export function PlayerStatus({ player, showHits = true }: PlayerStatusProps) {
+export function PlayerStatus({ player, showHits = true, isDay14 = false }: PlayerStatusProps) {
 	const [borrowDialog, setBorrowDialog] = useState(false);
 	const [repayDialog, setRepayDialog] = useState(false);
 	const [pawnDialog, setPawnDialog] = useState(false);
@@ -190,7 +191,7 @@ export function PlayerStatus({ player, showHits = true }: PlayerStatusProps) {
 
 						<Button
 							onClick={() => setRedeemDialog(true)}
-							disabled={!player.ringPawned || player.resources < 159}
+							disabled={!isDay14 || !player.ringPawned || player.resources < 159}
 							className="text-sm py-3"
 						>
 							Redeem Ring ($159)
@@ -379,7 +380,7 @@ export function PlayerStatus({ player, showHits = true }: PlayerStatusProps) {
 						<AlertDialogCancel>Cancel</AlertDialogCancel>
 						<AlertDialogAction
 							onClick={handleRedeemRing}
-							disabled={!player.ringPawned || player.resources < 159}
+							disabled={!isDay14 || !player.ringPawned || player.resources < 159}
 						>
 							Confirm Redeem Ring ($159)
 						</AlertDialogAction>
