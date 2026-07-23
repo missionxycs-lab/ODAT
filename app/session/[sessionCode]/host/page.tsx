@@ -171,6 +171,10 @@ export default function HostPage() {
 							</CardTitle>
 							<p className="text-2xl sm:text-3xl text-muted-foreground mt-6">
 								You need to repay your loans and redeem your wedding ring.
+
+								If you succeed, you may remove one Health Hit!
+								
+								If you fail, you will receive one Health Hit!
 							</p>
 						</CardHeader>
 					</Card>
